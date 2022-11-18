@@ -50,7 +50,11 @@ footer {
   width: 20em;
   background-color: var(--background-color2);
   border: 2px solid black;
-  /* display: none; */
+  visibility: hidden;
+}
+
+#menu.open {
+  visibility: visible;
 }
 
 #menu li {
