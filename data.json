@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "name": "Shark",
+    "alt": "Shark",
+    "image": "./images/shark.jpg",
+    "audio": "./media/shark.m4a",
+    "pronounciation": "shaark",
+    "category": "fish"
+  },
+  {
+    "id": "2",
+    "name": "Octopus",
+    "alt": "Octopus",
+    "image": "./images/octopus.jpg",
+    "audio": "./media/octopus.m4a",
+    "pronounciation": "aak-tuh-puhs",
+    "category": "fish"
+  },
+  {
+    "id": "3",
+    "name": "Whale",
+    "alt": "Whale",
+    "image": "./images/whale.jpg",
+    "audio": "./media/whale.m4a",
+    "pronounciation": "wayl",
+    "category": "fish"
+  },
+  {
+    "id": "4",
+    "name": "Jellyfish",
+    "alt": "Jellyfish",
+    "image": "./images/jellyfish.jpg",
+    "audio": "./media/jellyfish.m4a",
+    "pronounciation": "jeh-lee-fish",
+    "category": "fish"
+  },
+  {
+    "id": "5",
+    "name": "Sea Turtle",
+    "alt": "Sea Turtle",
+    "image": "./images/sea-turtle.jpg",
+    "audio": "./media/sea-turtle.m4a",
+    "pronounciation": "see tur-tl",
+    "category": "fish"
+  },
+  {
+    "id": "6",
+    "name": "Dolphin",
+    "alt": "Dolphin",
+    "image": "./images/dolphin.jpg",
+    "audio": "./media/dolphin.m4a",
+    "pronounciation": "daal-fn",
+    "category": "fish"
+  },
+  {
+    "id": "7",
+    "name": "Honeybee",
+    "alt": "Honeybee",
+    "image": "",
+    "audio": "",
+    "pronounciation": "huh-nee-bee",
+    "category": "insects"
+  },
+  {
+    "id": "8",
+    "name": "Fly",
+    "alt": "Fly",
+    "image": "",
+    "audio": "",
+    "pronounciation": "fly",
+    "category": "insects"
+  },
+  {
+    "id": "9",
+    "name": "Butterfly",
+    "alt": "Butterfly",
+    "image": "",
+    "audio": "",
+    "pronounciation": "buh-tr-flai",
+    "category": "insects"
+  },
+  {
+    "id": "10",
+    "name": "Worm",
+    "alt": "Worm",
+    "image": "",
+    "audio": "",
+    "pronounciation": "wurm",
+    "category": "insects"
+  },
+  {
+    "id": "11",
+    "name": "Beetle",
+    "alt": "Beetle",
+    "image": "",
+    "audio": "",
+    "pronounciation": "bee-tl",
+    "category": "insects"
+  },
+  {
+    "id": "12",
+    "name": "Cricket",
+    "alt": "Cricket",
+    "image": "",
+    "audio": "",
+    "pronounciation": "kri-kuht",
+    "category": "insects"
+  }
+]
