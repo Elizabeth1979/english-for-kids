@@ -10,15 +10,13 @@ filterDropdown.addEventListener('change', filterResults);
 
 function filterResults(e) {
     const value = this.value;
-    console.log(value);
-    const filteredArr = dataArr.filter((item) => item.category === {value});
-    console.log("filter", filteredArr);
-    // displayList(filteredArr);
+    const filteredArr = dataArr.filter((item) => item.category === value);
+    displayList(filteredArr);
 }
 
 // display the list of animals
 function displayList(data) {
-    console.log(data);
+    animalList.innerHTML = "";
     let listItems = "";
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
