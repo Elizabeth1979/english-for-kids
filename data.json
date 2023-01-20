@@ -6,7 +6,7 @@
     "image": "./images/shark.jpg",
     "audio": "./media/shark.m4a",
     "pronounciation": "shaark",
-    "category": "fish"
+    "category": "sea"
   },
   {
     "id": "2",
@@ -15,7 +15,7 @@
     "image": "./images/octopus.jpg",
     "audio": "./media/octopus.m4a",
     "pronounciation": "aak-tuh-puhs",
-    "category": "fish"
+    "category": "sea"
   },
   {
     "id": "3",
@@ -24,7 +24,7 @@
     "image": "./images/whale.jpg",
     "audio": "./media/whale.m4a",
     "pronounciation": "wayl",
-    "category": "fish"
+    "category": "sea"
   },
   {
     "id": "4",
@@ -33,7 +33,7 @@
     "image": "./images/jellyfish.jpg",
     "audio": "./media/jellyfish.m4a",
     "pronounciation": "jeh-lee-fish",
-    "category": "fish"
+    "category": "sea"
   },
   {
     "id": "5",
@@ -42,7 +42,7 @@
     "image": "./images/sea-turtle.jpg",
     "audio": "./media/sea-turtle.m4a",
     "pronounciation": "see tur-tl",
-    "category": "fish"
+    "category": "sea"
   },
   {
     "id": "6",
@@ -51,7 +51,7 @@
     "image": "./images/dolphin.jpg",
     "audio": "./media/dolphin.m4a",
     "pronounciation": "daal-fn",
-    "category": "fish"
+    "category": "sea"
   },
   {
     "id": "7",
