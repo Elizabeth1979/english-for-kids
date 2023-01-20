@@ -17,22 +17,25 @@ animalList.addEventListener('click', (e) => {
     console.log(this);
 })
 
+// get items into arr from json
+console.log(data);
+
 // Filter json file
 const seaAnimalsArr = data.filter((item) => item.category === "fish");
 const insectsArr = data.filter((item) => item.category === "insects");
 
 // Check which page we are on
-let currentArr = [];
-if (heading.innerText.includes("Sea Animals")) {
-    currentArr = seaAnimalsArr;
-} else {
-    currentArr = insectsArr;
-}
+// let currentArr = [];
+// if (heading.innerText.includes("Sea Animals")) {
+//     currentArr = seaAnimalsArr;
+// } else {
+//     currentArr = insectsArr;
+// }
 
 // display the list of animals
 let listItems = "";
-for (let i = 0; i < currentArr.length; i++) {
-    let item = currentArr[i];
+for (let i = 0; i < data.length; i++) {
+    let item = data[i];
     // Why += and not =+
   listItems += `<li>
     <h2>${item.name}</h2>
@@ -43,10 +46,6 @@ for (let i = 0; i < currentArr.length; i++) {
     <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
 </li>`;
 }
-
-currentArr.map((item) => {
-
-})
 
 // Why not append?
 animalList.innerHTML += listItems;
