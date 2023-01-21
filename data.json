@@ -57,7 +57,7 @@
     "id": "7",
     "name": "Honeybee",
     "alt": "Honeybee",
-    "image": "",
+    "image": "./images/honeybee.jpg",
     "audio": "",
     "pronounciation": "huh-nee-bee",
     "category": "insects"
@@ -66,7 +66,7 @@
     "id": "8",
     "name": "Fly",
     "alt": "Fly",
-    "image": "",
+    "image": "./images/fly.jpg",
     "audio": "",
     "pronounciation": "fly",
     "category": "insects"
@@ -75,7 +75,7 @@
     "id": "9",
     "name": "Butterfly",
     "alt": "Butterfly",
-    "image": "",
+    "image": "./images/butterfly.jpg",
     "audio": "",
     "pronounciation": "buh-tr-flai",
     "category": "insects"
@@ -84,7 +84,7 @@
     "id": "10",
     "name": "Worm",
     "alt": "Worm",
-    "image": "",
+    "image": "./images/worm.jpg",
     "audio": "",
     "pronounciation": "wurm",
     "category": "insects"
@@ -93,18 +93,18 @@
     "id": "11",
     "name": "Beetle",
     "alt": "Beetle",
-    "image": "",
+    "image": "./images/beetle.jpg",
     "audio": "",
     "pronounciation": "bee-tl",
     "category": "insects"
   },
   {
     "id": "12",
-    "name": "Cricket",
-    "alt": "Cricket",
-    "image": "",
+    "name": "Grasshopper",
+    "alt": "Grasshopper",
+    "image": "./images/grasshopper.jpg",
     "audio": "",
-    "pronounciation": "kri-kuht",
+    "pronounciation": "gras-haa-pr",
     "category": "insects"
   }
 ]
