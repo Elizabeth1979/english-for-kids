@@ -58,7 +58,7 @@
     "name": "Honeybee",
     "alt": "Honeybee",
     "image": "./images/honeybee.jpg",
-    "audio": "",
+    "audio": "./media/honeybee.m4a",
     "pronounciation": "huh-nee-bee",
     "category": "insects"
   },
@@ -67,7 +67,7 @@
     "name": "Fly",
     "alt": "Fly",
     "image": "./images/fly.jpg",
-    "audio": "",
+    "audio": "./media/fly.m4a",
     "pronounciation": "fly",
     "category": "insects"
   },
@@ -76,7 +76,7 @@
     "name": "Butterfly",
     "alt": "Butterfly",
     "image": "./images/butterfly.jpg",
-    "audio": "",
+    "audio": "./media/butterfly.m4a",
     "pronounciation": "buh-tr-flai",
     "category": "insects"
   },
@@ -85,7 +85,7 @@
     "name": "Worm",
     "alt": "Worm",
     "image": "./images/worm.jpg",
-    "audio": "",
+    "audio": "./media/worm.m4a",
     "pronounciation": "wurm",
     "category": "insects"
   },
@@ -94,7 +94,7 @@
     "name": "Beetle",
     "alt": "Beetle",
     "image": "./images/beetle.jpg",
-    "audio": "",
+    "audio": "./media/beetle.m4a",
     "pronounciation": "bee-tl",
     "category": "insects"
   },
@@ -103,7 +103,7 @@
     "name": "Grasshopper",
     "alt": "Grasshopper",
     "image": "./images/grasshopper.jpg",
-    "audio": "",
+    "audio": "./media/grasshopper.m4a",
     "pronounciation": "gras-haa-pr",
     "category": "insects"
   }
