@@ -2,15 +2,14 @@ import data from "./data.json" assert { type: "json" };
 
 const animalList = document.getElementById("animals-list");
 const filterDropdown = document.getElementById("filter");
-const dataArr = data;
 
-displayList(dataArr);
+displayList(data);
 
 filterDropdown.addEventListener('change', filterResults);
 
-function filterResults(e) {
+function filterResults() {
     const value = this.value;
-    const filteredArr = dataArr.filter((item) => item.category === value);
+    const filteredArr = data.filter((item) => value=="all" || item.category === value);
     displayList(filteredArr);
 }
 
@@ -21,18 +20,25 @@ function displayList(data) {
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
         // Why += and not =+
-        listItems += `<li>
+        listItems = `<li>
             <h2>${item.name}</h2>
-            <button onclick="document.getElementById(${item.id}).play();">
+            <button id="btn-${item.id}">
                 <img alt=${item.alt} src=${item.image}>
             </button>
             <audio id=${item.id} src=${item.audio}></audio>
             <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
         </li>`;
+        animalList.innerHTML += listItems;
+        document.querySelector(`#btn-${item.id}`).addEventListener('click',() => {
+            document.getElementById(item.id).play();
+        });
     }
-    // Why not append?
-    animalList.innerHTML += listItems;
+    // to do
+    // Add on click function on the ul element
+    
 }
+
+
 
 // const menuBtn = document.getElementById("menuBtn");
 // const menu = document.getElementById("menu");

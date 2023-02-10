@@ -170,9 +170,10 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  min-width: 100px;
-  min-height: 100px;
+  // min-width: 100px;
+  // min-height: 100px;
   display: block;
+  object-fit: cover;
 }
 
 /* Inherit fonts for inputs and buttons */
