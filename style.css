@@ -35,41 +35,13 @@ footer {
   right: 10px;
 }
 
-#menuBtn {
+#filter {
   font-family: var(--font-family-title);
-  font-size: 1.5rem;
-  border-radius: 0.5em;
+  font-size: 1.2rem;
+  border-radius: 0.3em;
   padding: 0.5em 1.2em;
   cursor: pointer;
   background-color: var(--background-light);
-}
-
-#menu {
-  position: absolute;
-  font-family: var(--font-family-title);
-  width: 17em;
-  background-color: var(--background-light);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 0.1em;
-  border-radius: 0.2em;
-}
-
-.close {
-  visibility: hidden;
-}
-/* 
-This doesn't work..
-#menuBtn:hover #menu{
-  visibility: visible;
-} */
-
-#menu li {
-  margin: 1.2em 0;
-}
-
-#menu a {
-  text-decoration: none;
-  font-size: 1.5rem;
 }
 
 main {
@@ -115,10 +87,6 @@ h1 {
 #animals-list img {
   transition: scale 250ms ease-in-out;
 }
-
-/* #animals-list li {
-  overflow: hidden;
-} */
 
 #animals-list button:hover img, #animals-list button:focus img{
   scale: 1.1;
