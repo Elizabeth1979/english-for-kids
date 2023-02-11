@@ -20,7 +20,7 @@ function displayList(data) {
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
         // Why += and not =+
-        listItems = `<li>
+        listItems += `<li>
             <h2>${item.name}</h2>
             <button id="btn-${item.id}">
                 <img alt=${item.alt} src=${item.image}>
@@ -28,17 +28,18 @@ function displayList(data) {
             <audio id=${item.id} src=${item.audio}></audio>
             <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
         </li>`;
-        animalList.innerHTML += listItems;
-        document.querySelector(`#btn-${item.id}`).addEventListener('click',() => {
-            document.getElementById(item.id).play();
-        });
     }
-    // to do
-    // Add on click function on the ul element
-    
+    animalList.innerHTML += listItems;
+    addPlayOnClick();
 }
 
-
+function addPlayOnClick() {
+    animalList.addEventListener('click', (e) => { 
+        if(e.target.localName != "button") return;
+        let audio = e.target.nextElementSibling;
+        audio.play();
+    });
+}
 
 // const menuBtn = document.getElementById("menuBtn");
 // const menu = document.getElementById("menu");
