@@ -10,20 +10,20 @@
   },
   {
     "id": "2",
-    "name": "Octopus",
-    "alt": "Octopus",
-    "image": "./images/octopus.jpg",
-    "audio": "./media/octopus.m4a",
-    "pronounciation": "aak-tuh-puhs",
-    "category": "sea"
-  },
-  {
-    "id": "3",
     "name": "Whale",
     "alt": "Whale",
     "image": "./images/whale.jpg",
     "audio": "./media/whale.m4a",
     "pronounciation": "wayl",
+    "category": "sea"
+  },
+  {
+    "id": "3",
+    "name": "Dolphin",
+    "alt": "Dolphin",
+    "image": "./images/dolphin.jpg",
+    "audio": "./media/dolphin.m4a",
+    "pronounciation": "daal-fn",
     "category": "sea"
   },
   {
@@ -37,6 +37,15 @@
   },
   {
     "id": "5",
+    "name": "Octopus",
+    "alt": "Octopus",
+    "image": "./images/octopus.jpg",
+    "audio": "./media/octopus.m4a",
+    "pronounciation": "aak-tuh-puhs",
+    "category": "sea"
+  },
+  {
+    "id": "6",
     "name": "Sea Turtle",
     "alt": "Sea Turtle",
     "image": "./images/sea-turtle.jpg",
@@ -45,16 +54,16 @@
     "category": "sea"
   },
   {
-    "id": "6",
-    "name": "Dolphin",
-    "alt": "Dolphin",
-    "image": "./images/dolphin.jpg",
-    "audio": "./media/dolphin.m4a",
-    "pronounciation": "daal-fn",
+    "id": "7",
+    "name": "Clownfish",
+    "alt": "Clownfish",
+    "image": "./images/clownfish.jpg",
+    "audio": "./media/clownfish.m4a",
+    "pronounciation": "klown-fish",
     "category": "sea"
   },
   {
-    "id": "7",
+    "id": "21",
     "name": "Honeybee",
     "alt": "Honeybee",
     "image": "./images/honeybee.jpg",
@@ -63,7 +72,7 @@
     "category": "insects"
   },
   {
-    "id": "8",
+    "id": "22",
     "name": "Fly",
     "alt": "Fly",
     "image": "./images/fly.jpg",
@@ -72,7 +81,7 @@
     "category": "insects"
   },
   {
-    "id": "9",
+    "id": "23",
     "name": "Butterfly",
     "alt": "Butterfly",
     "image": "./images/butterfly.jpg",
@@ -81,16 +90,16 @@
     "category": "insects"
   },
   {
-    "id": "10",
-    "name": "Worm",
-    "alt": "Worm",
-    "image": "./images/worm.jpg",
-    "audio": "./media/worm.m4a",
-    "pronounciation": "wurm",
+    "id": "24",
+    "name": "Snail",
+    "alt": "Snail",
+    "image": "./images/snail.jpg",
+    "audio": "./media/snail.m4a",
+    "pronounciation": "snayl",
     "category": "insects"
   },
   {
-    "id": "11",
+    "id": "25",
     "name": "Beetle",
     "alt": "Beetle",
     "image": "./images/beetle.jpg",
@@ -99,12 +108,21 @@
     "category": "insects"
   },
   {
-    "id": "12",
+    "id": "26",
     "name": "Grasshopper",
     "alt": "Grasshopper",
     "image": "./images/grasshopper.jpg",
     "audio": "./media/grasshopper.m4a",
     "pronounciation": "gras-haa-pr",
+    "category": "insects"
+  },
+  {
+    "id": "27",
+    "name": "Spider",
+    "alt": "Spider",
+    "image": "./images/spider.jpg",
+    "audio": "./media/spider.m4a",
+    "pronounciation": "spai-dr",
     "category": "insects"
   }
 ]
