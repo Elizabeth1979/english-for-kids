@@ -22,10 +22,10 @@ function displayList(data) {
         // Why += and not =+
         listItems += `<li>
             <h2>${item.name}</h2>
-            <button id="btn-${item.id}">
+            <button class="animal-btn" id="btn-${item.name}">
                 <img class="animal-img" width="300" height="300" alt=${item.alt} src=${item.image}>
             </button>
-            <audio id=${item.id} src=${item.audio}></audio>
+            <audio id=${item.name} src=${item.audio}></audio>
             <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
         </li>`;
     }

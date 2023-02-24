@@ -3,7 +3,7 @@
   --font-family-main: 'Courier New', Courier, monospace;
   --background-light-hf: aqua;
   --background-light: antiquewhite;
-  --outline-color: blue;
+  --outline-color: black;
 }
 
 body {
@@ -92,12 +92,12 @@ h1 {
   transition: scale 250ms ease-in-out;
 }
 
-#animals-list button:hover img, #animals-list button:focus img{
+.animal-btn:hover img, .animal-btn:focus img{
   scale: 1.1;
 }
 
 *:focus-visible {
-    outline-offset: 3px;
+    outline-offset: 4px;
     outline-color: var(--outline-color);
 }
 

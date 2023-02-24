@@ -1,6 +1,5 @@
 [
   {
-    "id": "1",
     "name": "Shark",
     "alt": "Shark",
     "image": "./images/shark.jpg",
@@ -9,7 +8,6 @@
     "category": "sea"
   },
   {
-    "id": "2",
     "name": "Whale",
     "alt": "Whale",
     "image": "./images/whale.jpg",
@@ -18,7 +16,6 @@
     "category": "sea"
   },
   {
-    "id": "3",
     "name": "Dolphin",
     "alt": "Dolphin",
     "image": "./images/dolphin.jpg",
@@ -27,7 +24,6 @@
     "category": "sea"
   },
   {
-    "id": "4",
     "name": "Jellyfish",
     "alt": "Jellyfish",
     "image": "./images/jellyfish.jpg",
@@ -36,7 +32,6 @@
     "category": "sea"
   },
   {
-    "id": "5",
     "name": "Octopus",
     "alt": "Octopus",
     "image": "./images/octopus.jpg",
@@ -45,7 +40,6 @@
     "category": "sea"
   },
   {
-    "id": "6",
     "name": "Sea Turtle",
     "alt": "Sea Turtle",
     "image": "./images/sea-turtle.jpg",
@@ -54,7 +48,6 @@
     "category": "sea"
   },
   {
-    "id": "7",
     "name": "Clownfish",
     "alt": "Clownfish",
     "image": "./images/clownfish.jpg",
@@ -63,7 +56,6 @@
     "category": "sea"
   },
   {
-    "id": "21",
     "name": "Honeybee",
     "alt": "Honeybee",
     "image": "./images/honeybee.jpg",
@@ -72,7 +64,6 @@
     "category": "insects"
   },
   {
-    "id": "22",
     "name": "Fly",
     "alt": "Fly",
     "image": "./images/fly.jpg",
@@ -81,7 +72,6 @@
     "category": "insects"
   },
   {
-    "id": "23",
     "name": "Butterfly",
     "alt": "Butterfly",
     "image": "./images/butterfly.jpg",
@@ -90,7 +80,6 @@
     "category": "insects"
   },
   {
-    "id": "24",
     "name": "Snail",
     "alt": "Snail",
     "image": "./images/snail.jpg",
@@ -99,7 +88,6 @@
     "category": "insects"
   },
   {
-    "id": "25",
     "name": "Beetle",
     "alt": "Beetle",
     "image": "./images/beetle.jpg",
@@ -108,7 +96,6 @@
     "category": "insects"
   },
   {
-    "id": "26",
     "name": "Grasshopper",
     "alt": "Grasshopper",
     "image": "./images/grasshopper.jpg",
@@ -117,7 +104,6 @@
     "category": "insects"
   },
   {
-    "id": "27",
     "name": "Spider",
     "alt": "Spider",
     "image": "./images/spider.jpg",
