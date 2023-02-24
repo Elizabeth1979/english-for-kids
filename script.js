@@ -23,7 +23,7 @@ function displayList(data) {
         listItems += `<li>
             <h2>${item.name}</h2>
             <button id="btn-${item.id}">
-                <img alt=${item.alt} src=${item.image}>
+                <img class="animal-img" width="300" height="300" alt=${item.alt} src=${item.image}>
             </button>
             <audio id=${item.id} src=${item.audio}></audio>
             <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>

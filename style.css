@@ -65,7 +65,7 @@ h1 {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -84,7 +84,11 @@ h1 {
     overflow: hidden;
 }
 
-#animals-list img {
+.animal-img {
+  width: 300;
+  height: auto;
+  object-fit: cover;
+  pointer-events: none;
   transition: scale 250ms ease-in-out;
 }
 
@@ -138,11 +142,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  // min-width: 100px;
-  // min-height: 100px;
   display: block;
-  object-fit: cover;
-  pointer-events: none;
 }
 
 /* Inherit fonts for inputs and buttons */
