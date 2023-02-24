@@ -1,11 +1,12 @@
 import data from "./data.json" assert { type: "json" };
 
 const animalList = document.getElementById("animals-list");
-const filterDropdown = document.getElementById("filter");
+const filterByType = document.getElementById("filter-by-type");
+const filterByLetter = document.getElementById("filter-by-letter");
 
 displayList(data);
 
-filterDropdown.addEventListener('change', filterResults);
+filterByType.addEventListener('change', filterResults);
 
 function filterResults() {
     const value = this.value;
