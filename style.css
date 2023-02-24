@@ -56,6 +56,7 @@ body {
 
 .filter {
   background-color: var(--background-light-hf);
+  cursor: pointer;
 }
 
 .search {
@@ -66,9 +67,7 @@ body {
   font-family: var(--font-family-title);
   font-size: 1.2rem;
   border-radius: 0.3em;
-  padding: 0.5em 1.2em;
-  cursor: pointer;
-  
+  padding: 0.5em 1.2em;  
 }
 
 #logo-text {
