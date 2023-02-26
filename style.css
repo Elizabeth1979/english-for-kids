@@ -93,8 +93,7 @@ h1 {
 #animals-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    gap: 0.7em;
-    padding: 0 2em;
+    gap: 2em;
 }
 
 .list-item {
@@ -115,6 +114,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .animal-img {
