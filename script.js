@@ -1,16 +1,24 @@
 import data from "./data.json" assert { type: "json" };
 
 const animalList = document.getElementById("animals-list");
-const filterByType = document.getElementById("filter-by-type");
-const filterByLetter = document.getElementById("filter-by-letter");
+const typeFilter = document.getElementById("filter-by-type");
+const letterFilter = document.getElementById("filter-by-letter");
 
 displayList(data);
 
-filterByType.addEventListener('change', filterResults);
+typeFilter.addEventListener('change', filterByType);
+letterFilter.addEventListener('change', filterByLetter);
 
-function filterResults() {
+function filterByType() {
     const value = this.value;
     const filteredArr = data.filter((item) => value=="all" || item.category === value);
+    displayList(filteredArr);
+}
+
+function filterByLetter() {
+    const value = this.value;
+    console.log(value);
+    const filteredArr = data.filter((item) => item.name.startsWith(value.toUpperCase()));
     displayList(filteredArr);
 }
 
@@ -20,7 +28,6 @@ function displayList(data) {
     let listItems = "";
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
-        // Why += and not =+
         listItems += `<li class="list-item">
             <div class="list-item-title">
                 <h2>${item.name}</h2>
@@ -30,6 +37,7 @@ function displayList(data) {
                 <img class="animal-img" width="300" height="300" alt=${item.alt} src=${item.image}>
             </button>
             <audio id=${item.name} src=${item.audio}></audio>
+            <p class="about">${item.about === undefined ? "" : item.about}</p>
         </li>`;
     }
     animalList.innerHTML += listItems;

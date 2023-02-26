@@ -5,7 +5,8 @@
     "image": "./images/shark.jpg",
     "audio": "./media/shark.m4a",
     "pronounciation": "shaark",
-    "category": "sea"
+    "category": "sea",
+    "about": "A shark has many teeth"
   },
   {
     "name": "Whale",
@@ -13,7 +14,8 @@
     "image": "./images/whale.jpg",
     "audio": "./media/whale.m4a",
     "pronounciation": "wayl",
-    "category": "sea"
+    "category": "sea",
+    "about": "a whale is a mammal"
   },
   {
     "name": "Dolphin",
@@ -21,7 +23,8 @@
     "image": "./images/dolphin.jpg",
     "audio": "./media/dolphin.m4a",
     "pronounciation": "daal-fn",
-    "category": "sea"
+    "category": "sea",
+    "about": "A dolphin is very friendly"
   },
   {
     "name": "Jellyfish",
@@ -29,7 +32,8 @@
     "image": "./images/jellyfish.jpg",
     "audio": "./media/jellyfish.m4a",
     "pronounciation": "jeh-lee-fish",
-    "category": "sea"
+    "category": "sea",
+    "about": "A jellyfish can sting"
   },
   {
     "name": "Octopus",
@@ -37,7 +41,8 @@
     "image": "./images/octopus.jpg",
     "audio": "./media/octopus.m4a",
     "pronounciation": "aak-tuh-puhs",
-    "category": "sea"
+    "category": "sea",
+    "about": "An octopus has 8 legs"
   },
   {
     "name": "Sea Turtle",
@@ -45,7 +50,8 @@
     "image": "./images/sea-turtle.jpg",
     "audio": "./media/sea-turtle.m4a",
     "pronounciation": "see tur-tl",
-    "category": "sea"
+    "category": "sea",
+    "about": "A sea turtle can dive deep"
   },
   {
     "name": "Clownfish",
@@ -53,7 +59,8 @@
     "image": "./images/clownfish.jpg",
     "audio": "./media/clownfish.m4a",
     "pronounciation": "klown-fish",
-    "category": "sea"
+    "category": "sea",
+    "about": "A clownfish has orange stripes"
   },
   {
     "name": "Honeybee",
@@ -61,7 +68,8 @@
     "image": "./images/honeybee.jpg",
     "audio": "./media/honeybee.m4a",
     "pronounciation": "huh-nee-bee",
-    "category": "insects"
+    "category": "insects",
+    "about": "A honeybey makes honey"
   },
   {
     "name": "Fly",
@@ -69,7 +77,8 @@
     "image": "./images/fly.jpg",
     "audio": "./media/fly.m4a",
     "pronounciation": "fly",
-    "category": "insects"
+    "category": "insects",
+    "about": "A fly is fast"
   },
   {
     "name": "Butterfly",
@@ -77,7 +86,8 @@
     "image": "./images/butterfly.jpg",
     "audio": "./media/butterfly.m4a",
     "pronounciation": "buh-tr-flai",
-    "category": "insects"
+    "category": "insects",
+    "about": "the butterfly has colorful wings"
   },
   {
     "name": "Snail",
@@ -85,7 +95,8 @@
     "image": "./images/snail.jpg",
     "audio": "./media/snail.m4a",
     "pronounciation": "snayl",
-    "category": "insects"
+    "category": "insects",
+    "about": "A snail is very slow"
   },
   {
     "name": "Beetle",
@@ -93,7 +104,8 @@
     "image": "./images/beetle.jpg",
     "audio": "./media/beetle.m4a",
     "pronounciation": "bee-tl",
-    "category": "insects"
+    "category": "insects",
+    "about": "The beetle is glowing"
   },
   {
     "name": "Grasshopper",
@@ -101,7 +113,8 @@
     "image": "./images/grasshopper.jpg",
     "audio": "./media/grasshopper.m4a",
     "pronounciation": "gras-haa-pr",
-    "category": "insects"
+    "category": "insects",
+    "about": "A grasshopper can hop"
   },
   {
     "name": "Spider",
@@ -109,6 +122,7 @@
     "image": "./images/spider.jpg",
     "audio": "./media/spider.m4a",
     "pronounciation": "spai-dr",
-    "category": "insects"
+    "category": "insects",
+    "about": "A spider builds a web"
   }
 ]
