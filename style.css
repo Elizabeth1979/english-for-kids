@@ -116,6 +116,11 @@ h1 {
     gap: 2em;
 }
 
+.empty-state {
+  font-size: 3rem;
+  margin: auto;
+}
+
 .list-item {
   display: flex;
   flex-direction: column;

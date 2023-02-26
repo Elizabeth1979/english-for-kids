@@ -3,6 +3,7 @@ import data from "./data.json" assert { type: "json" };
 const animalList = document.getElementById("animals-list");
 const typeFilter = document.getElementById("filter-by-type");
 const letterFilter = document.getElementById("filter-by-letter");
+const liveRegion = document.getElementById("live-region");
 
 displayList(data);
 
@@ -13,6 +14,7 @@ function filterByType() {
     const value = this.value;
     const filteredArr = data.filter((item) => value=="all" || item.category === value);
     displayList(filteredArr);
+    liveRegion.innerText = `${filteredArr.length} results found`;
 }
 
 function filterByLetter() {
@@ -20,6 +22,7 @@ function filterByLetter() {
     console.log(value);
     const filteredArr = data.filter((item) => item.name.startsWith(value.toUpperCase()));
     displayList(filteredArr);
+    liveRegion.innerText = `${filteredArr.length} results found`;
 }
 
 // display the list of animals
@@ -40,7 +43,12 @@ function displayList(data) {
             <p class="about">${item.about === undefined ? "" : item.about}</p>
         </li>`;
     }
-    animalList.innerHTML += listItems;
+    if(listItems === "") {
+        animalList.innerHTML = `<p class="empty-state">No words found</p>`;
+        liveRegion.innerText = "No words found";
+    } else {
+        animalList.innerHTML += listItems;
+    }
     addPlayOnClick();
 }
 
