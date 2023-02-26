@@ -21,13 +21,15 @@ function displayList(data) {
     for (let i = 0; i < data.length; i++) {
         let item = data[i];
         // Why += and not =+
-        listItems += `<li>
-            <h2>${item.name}</h2>
+        listItems += `<li class="list-item">
+            <div class="list-item-title">
+                <h2>${item.name}</h2>
+                <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
+            </div>
             <button class="animal-btn" id="btn-${item.name}">
                 <img class="animal-img" width="300" height="300" alt=${item.alt} src=${item.image}>
             </button>
             <audio id=${item.name} src=${item.audio}></audio>
-            <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
         </li>`;
     }
     animalList.innerHTML += listItems;
@@ -49,22 +51,6 @@ function addPlayOnClick() {
 // menuBtn.addEventListener('click', () => {
 //     menu.classList.toggle('close');
 // });
-
-// Audio play - listener on buttons - how to implement
-// target element is image and not button with click
-// animalList.addEventListener('click', (e) => {
-//     console.log(e);
-//     console.log(this);
-// })
-
-// Check which page we are on
-// let currentArr = [];
-// if (heading.innerText.includes("Sea Animals")) {
-//     currentArr = seaAnimalsArr;
-// } else {
-//     currentArr = insectsArr;
-// }
-
 
 
 /*
