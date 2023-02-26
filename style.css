@@ -129,8 +129,8 @@ h1 {
   scale: 1.1;
 }
 
-/*Narrow devices < 600px*/
-@media (max-width: 600px) {
+/*Narrow devices < 1000px*/
+@media (max-width: 1000px) {
   .container {
     display: grid;
     grid-template-columns: 1fr;
