@@ -10,6 +10,7 @@ body {
   background-color: var(--background-light);
   min-height: 100vh;
   line-height: 1.5;
+  font-size: 1.1rem;
 }
 
 .container {
@@ -109,6 +110,14 @@ h1 {
   border: none;  
 }
 
+.reset-filters {
+  border: 0;
+  padding: 0.5em 1em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  background-color: var(--background-light-hf);
+}
+
 /*grid layout for the list and list items*/
 #animals-list {
     display: grid;
@@ -125,13 +134,13 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.5em;
 }
 
 .list-item-title {
   display: flex;
   align-items: center;
   gap: 1em;
-  margin-bottom: 0.5em;
 }
 
 #animals-list button {
