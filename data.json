@@ -63,6 +63,15 @@
     "about": "A clownfish has orange stripes"
   },
   {
+    "name": "Crab",
+    "alt": "Crab",
+    "image": "./images/crab.jpg",
+    "audio": "./media/crab.m4a",
+    "pronounciation": "krab",
+    "category": "sea",
+    "about": "A crab is not a fish"
+  },
+  {
     "name": "Honeybee",
     "alt": "Honeybee",
     "image": "./images/honeybee.jpg",
@@ -124,5 +133,185 @@
     "pronounciation": "spai-dr",
     "category": "insects",
     "about": "A spider builds a web"
+  },
+  {
+    "name": "Ant",
+    "alt": "Ant",
+    "image": "./images/ant.jpg",
+    "audio": "./media/ant.m4a",
+    "pronounciation": "ant",
+    "category": "insects",
+    "about": "An ant is hardworking"
+  },
+  {
+    "name": "Crocodile",
+    "alt": "Crocodile",
+    "image": "./images/crocodile.jpg",
+    "audio": "./media/crocodile.m4a",
+    "pronounciation": "kraa-kuh-dile",
+    "category": "reptiles",
+    "about": "Crocs prefer salt water"
+  },
+  {
+    "name": "Cheetah",
+    "alt": "Cheetah",
+    "image": "./images/cheetah.jpg",
+    "audio": "./media/cheetah.m4a",
+    "pronounciation": "chee-tuh",
+    "category": "land",
+    "about": "The cheetah is the fastest land animal"
+  },
+  {
+    "name": "Eagle",
+    "alt": "Eagle",
+    "image": "./images/eagle.jpg",
+    "audio": "./media/eagle.m4a",
+    "pronounciation": "ee-gl",
+    "category": "bird",
+    "about": "Eagles have amazing eyesight"
+  },
+  {
+    "name": "Elephant",
+    "alt": "Elephant",
+    "image": "./images/elephant.jpg",
+    "audio": "./media/elephant.m4a",
+    "pronounciation": "eh-luh-fnt",
+    "category": "land",
+    "about": "Elephants are the largest land animals"
+  },
+  {
+    "name": "Gorilla",
+    "alt": "Gorilla",
+    "image": "./images/gorilla.jpg",
+    "audio": "./media/gorilla.m4a",
+    "pronounciation": "gr-i-luh",
+    "category": "land",
+    "about": "Gorillas are the largest living primates"
+  },
+  {
+    "name": "Hippo",
+    "alt": "Hippo",
+    "image": "./images/hippo.jpg",
+    "audio": "./media/hippo.m4a",
+    "pronounciation": "hi-pow",
+    "category": "land",
+    "about": "Hippopotamus are herbivores"
+  },
+  {
+    "name": "Hummingbird",
+    "alt": "Hummingbird",
+    "image": "./images/hummingbird.jpg",
+    "audio": "./media/hummingbird.m4a",
+    "pronounciation": "huh-ming-burd",
+    "category": "bird",
+    "about": "The hummingbird makes a humming sound"
+  },
+  {
+    "name": "Iguana",
+    "alt": "Iguana",
+    "image": "./images/iguana.jpg",
+    "audio": "./media/iguana.m4a",
+    "pronounciation": "i-gwaa-nuh",
+    "category": "reptiles",
+    "about": "Iguanas are large lizards"
+  },
+  {
+    "name": "Koala",
+    "alt": "Koala",
+    "image": "./images/koala.jpg",
+    "audio": "./media/koala.m4a",
+    "pronounciation": "kow-aa-luh",
+    "category": "land",
+    "about": "Koalas eat eucalyptus"
+  },
+  {
+    "name": "Owl",
+    "alt": "Owl",
+    "image": "./images/owl.jpg",
+    "audio": "./media/owl.m4a",
+    "pronounciation": "owl",
+    "category": "bird",
+    "about": "Many owls are active at night"
+  },
+  {
+    "name": "Parrot",
+    "alt": "Parrot",
+    "image": "./images/parrot.jpg",
+    "audio": "./media/parrot.m4a",
+    "pronounciation": "peh-ruht",
+    "category": "bird",
+    "about": "Parrots have a curved beak"
+  },
+  {
+    "name": "Polar Bear",
+    "alt": "Polar Bear",
+    "image": "./images/polar-bear.jpg",
+    "audio": "./media/polar-bear.m4a",
+    "pronounciation": "pow-lr behr",
+    "category": "land",
+    "about": "Polar bears are great swimmers"
+  },
+  {
+    "name": "Racoon",
+    "alt": "Racoon",
+    "image": "./images/racoon.jpg",
+    "audio": "./media/racoon.m4a",
+    "pronounciation": "ra-koon",
+    "category": "land",
+    "about": "Racoons are omnivors"
+  },
+  {
+    "name": "Snake",
+    "alt": "Snake",
+    "image": "./images/snake.jpg",
+    "audio": "./media/snake.m4a",
+    "pronounciation": "snayk",
+    "category": "reptiles",
+    "about": "There are more than 3,000 species of snakes"
+  },
+  {
+    "name": "Sparrow",
+    "alt": "Sparrow",
+    "image": "./images/sparrow.jpg",
+    "audio": "./media/sparrow.m4a",
+    "pronounciation": "speh-row",
+    "category": "bird",
+    "about": "Sparrows have beautiful voices"
+  },
+  {
+    "name": "Squirrel",
+    "alt": "Squirrel",
+    "image": "./images/squirrel.jpg",
+    "audio": "./media/squirrel.m4a",
+    "pronounciation": "skwur-uhl",
+    "category": "land",
+    "about": "A squirrel eats nuts"
+  },
+  {
+    "name": "Toucan",
+    "alt": "Toucan",
+    "image": "./images/toucan.jpg",
+    "audio": "./media/toucan.m4a",
+    "pronounciation": "too-kan",
+    "category": "bird",
+    "about": "A toucan lives in the rainforest"
+  },
+  {
+    "name": "Arctic Fox",
+    "alt": "Arctic Fox",
+    "image": "./images/arctic-fox.jpg",
+    "audio": "./media/arctic-fox.m4a",
+    "pronounciation": "aark-tuhk faaks",
+    "category": "land",
+    "about": "Arctic fox is also known as snow fox"
+  },
+  {
+    "name": "Wolf",
+    "alt": "Wolf",
+    "image": "./images/wolf.jpg",
+    "audio": "./media/wolf.m4a",
+    "pronounciation": "wulf",
+    "category": "land",
+    "about": "Wolves live and hunt in packs"
   }
 ]

@@ -1,18 +1,29 @@
-import data from "./data.json" assert { type: "json" };
+import data from "./data.json" assert {
+    type: "json"
+};
 
 const animalList = document.getElementById("animals-list");
 const typeFilter = document.getElementById("filter-by-type");
 const letterFilter = document.getElementById("filter-by-letter");
 const liveRegion = document.getElementById("live-region");
+const searchInput = document.getElementById("search");
 
 displayList(data);
 
+searchInput.addEventListener('keyup', searchWord);
 typeFilter.addEventListener('change', filterByType);
 letterFilter.addEventListener('change', filterByLetter);
 
+function searchWord() {
+    let inputValue = searchInput.value.toLowerCase();
+    const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
+    displayList(filteredArr);
+    liveRegion.innerText = `${filteredArr.length} results found`;
+}
+
 function filterByType() {
     const value = this.value;
-    const filteredArr = data.filter((item) => value=="all" || item.category === value);
+    const filteredArr = data.filter((item) => value === "all" || item.category === value);
     displayList(filteredArr);
     liveRegion.innerText = `${filteredArr.length} results found`;
 }
@@ -20,7 +31,7 @@ function filterByType() {
 function filterByLetter() {
     const value = this.value;
     console.log(value);
-    const filteredArr = data.filter((item) => item.name.startsWith(value.toUpperCase()));
+    const filteredArr = data.filter((item) => value === "all" || item.name.startsWith(value.toUpperCase()));
     displayList(filteredArr);
     liveRegion.innerText = `${filteredArr.length} results found`;
 }
@@ -43,7 +54,7 @@ function displayList(data) {
             <p class="about">${item.about === undefined ? "" : item.about}</p>
         </li>`;
     }
-    if(listItems === "") {
+    if (listItems === "") {
         animalList.innerHTML = `<p class="empty-state">No words found</p>`;
         liveRegion.innerText = "No words found";
     } else {
@@ -53,15 +64,12 @@ function displayList(data) {
 }
 
 function addPlayOnClick() {
-    animalList.addEventListener('click', (e) => { 
-        if(e.target.localName != "button") return;
+    animalList.addEventListener('click', (e) => {
+        if (e.target.localName != "button") return;
         let audio = e.target.nextElementSibling;
         audio.play();
     });
 }
-
-// const menuBtn = document.getElementById("menuBtn");
-// const menu = document.getElementById("menu");
 
 // Menu operability - is this the best way?
 // menuBtn.addEventListener('click', () => {
@@ -79,12 +87,6 @@ function addPlayOnClick() {
 7. At first render display all animals - any performance issue?
 8. More categories: Nature, MAmmals, Birds
 9. How do I know if its a string or a number?
-*/
-
-/*
-Questions
-1. Live server - better way
-2. 
 */
 
 /*

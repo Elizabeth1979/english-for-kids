@@ -14,7 +14,7 @@
         <header class="header">
             <p id="logo-text">English for Kids</p>
             <form class="search-container" role="search">
-                <input type="text" class="search" placeholder="Search for a word">
+                <input type="text" id="search" class="search" placeholder="Search for a word">
                 <button class="search-icon">
                     <img src="./images/search.png" alt="search">
                 </button>
@@ -28,11 +28,15 @@
                     <option value="all">All</option>
                     <option value="sea">Sea Animals</option>
                     <option value="insects">Insects</option>
+                    <option value="land">Land Animals</option>
+                    <option value="bird">Birds</option>
+                    <option value="reptiles">Reptiles</option>
                 </select>
             </div>
             <div class="form-element">
                 <label class="filter-label" for="filter-by-letter">Filter by letter</label>
                 <select id="filter-by-letter" class="filter">
+                    <option value="all">All</option>
                     <option value="a">A</option>
                     <option value="b">B</option>
                     <option value="c">C</option>
