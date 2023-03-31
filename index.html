@@ -13,11 +13,12 @@
     <div class="container">
         <header class="header">
             <p id="logo-text">English for Kids</p>
-            <form class="search-container" role="search">
-                <input type="text" id="search" class="search" placeholder="Search for a word">
-                <button class="search-icon">
+            <form id="searchForm" class="search-container" role="search">
+                <input autocomplete="off" type="text" id="search" class="search" placeholder="Search for a word">
+                <button type="submit" id="searchButton" class="search-icon">
                     <img src="./images/search.png" alt="search">
                 </button>
+                <ul id="searchResultsList" role="list"></ul>
             </form>
         </header>
         <section class="filter-area" aria-labelledby="filter-area">

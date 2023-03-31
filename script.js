@@ -7,18 +7,34 @@ const typeFilter = document.getElementById("filter-by-type");
 const letterFilter = document.getElementById("filter-by-letter");
 const liveRegion = document.getElementById("live-region");
 const searchInput = document.getElementById("search");
+const searchForm = document.getElementById("searchForm");
+const searchResultsList = document.getElementById("searchResultsList");
 
 displayList(data);
 
-searchInput.addEventListener('keyup', searchWord);
+searchInput.addEventListener('keyup', displayResults);
+searchForm.addEventListener('submit', searchWord);
 typeFilter.addEventListener('change', filterByType);
 letterFilter.addEventListener('change', filterByLetter);
 
-function searchWord() {
+function searchWord(e) {
+    e.preventDefault();
     let inputValue = searchInput.value.toLowerCase();
     const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
     displayList(filteredArr);
     liveRegion.innerText = `${filteredArr.length} results found`;
+}
+
+function displayResults() {
+    searchResultsList.innerHTML = "";
+    // let inputValue = searchInput.value.toLowerCase();
+    // const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
+    // console.log(filteredArr);
+    // let listItems = "";
+    // filteredArr.forEach(item => {
+    //     listItems += `<li>${item.name}</li>`
+    // });
+    // searchResultsList.innerHTML += listItems;
 }
 
 function filterByType() {

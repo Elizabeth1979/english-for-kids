@@ -1,8 +1,10 @@
 :root {
   --font-family-title: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
   --font-family-main: 'Courier New', Courier, monospace;
-  --background-light-hf: aqua;
+  --background-light-accent: aqua;
   --background-light: antiquewhite;
+  --background-dark: rgb(40, 40, 40);
+
   --outline-color: navy;
 }
 
@@ -36,7 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--background-light-hf);
+  background-color: var(--background-light-accent);
   flex-wrap: wrap;
 }
 
@@ -73,7 +75,7 @@ h1 {
 }
 
 .filter {
-  background-color: var(--background-light-hf);
+  background-color: var(--background-light-accent);
   cursor: pointer;
   min-width: calc(100%);
 }
