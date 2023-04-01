@@ -14,17 +14,17 @@
     <div class="container">
         <header class="header">
             <p id="logo-text">English for Kids</p>
+            <button id="dark-mode-toggle" aria-label="toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </button>
             <form id="searchForm" class="search-container" role="search">
-                <input autocomplete="off" type="text" id="search" class="search" placeholder="Search for a word">
+                <input autocomplete="off" type="text" id="search" class="search" placeholder="Search">
                 <button type="submit" id="searchButton" class="search-icon">
                     <img src="./images/search.png" alt="search">
                 </button>
                 <ul id="search-results-list" class="hidden-results" role="list"></ul>
             </form>
-            <button id="dark-mode-toggle" aria-label="toggle dark mode">
-                <i class="fa-solid fa-moon"></i>
-                <i class="fa-solid fa-sun" aria-hidden="true"></i>
-            </button>
         </header>
         <section class="filter-area" aria-labelledby="filter-area">
             <h2 class="sr-only">Filter</h2>
