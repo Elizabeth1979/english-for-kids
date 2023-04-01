@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English for Kids</title>
+    <script src="https://kit.fontawesome.com/76450cf34a.js" crossorigin="anonymous"></script>
     <!-- <link rel="preload" href="/images/butterfly.jpg" as="image"> -->
 </head>
 <body>
@@ -18,20 +19,26 @@
                 <button type="submit" id="searchButton" class="search-icon">
                     <img src="./images/search.png" alt="search">
                 </button>
-                <ul id="searchResultsList" role="list"></ul>
+                <ul id="search-results-list" class="hidden-results" role="list"></ul>
             </form>
+            <button id="dark-mode-toggle" aria-label="toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+                <i class="fa-solid fa-sun" aria-hidden="true"></i>
+            </button>
         </header>
         <section class="filter-area" aria-labelledby="filter-area">
             <h2 class="sr-only">Filter</h2>
             <div class="form-element">
                 <label class="filter-label" for="filter-by-type">Filter by type</label>
                 <select id="filter-by-type" class="filter">
-                    <option value="all">All</option>
-                    <option value="sea">Sea Animals</option>
-                    <option value="insects">Insects</option>
-                    <option value="land">Land Animals</option>
-                    <option value="bird">Birds</option>
-                    <option value="reptiles">Reptiles</option>
+                    <div class="filter-container">
+                        <option value="all">All</option>
+                        <option value="sea">Sea Animals</option>
+                        <option value="insects">Insects</option>
+                        <option value="land">Land Animals</option>
+                        <option value="bird">Birds</option>
+                        <option value="reptiles">Reptiles</option>
+                    </div>  
                 </select>
             </div>
             <div class="form-element">

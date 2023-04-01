@@ -1,18 +1,45 @@
-:root {
-  --font-family-title: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-  --font-family-main: 'Courier New', Courier, monospace;
-  --background-light-accent: aqua;
-  --background-light: antiquewhite;
-  --background-dark: rgb(40, 40, 40);
 
-  --outline-color: navy;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+:root {
+  --font-family: 'Questrial', sans-serif;
+  --background-accent: rgb(134, 230, 230);
+  --background: rgb(228, 236, 234);
+  --color: rgb(40, 40, 40);
+  --outline-color: rgb(23, 23, 66);
+}
+
+.darkmode {
+  --background-accent: rgb(11, 11, 59);
+  --background: rgb(49, 53, 90);
+  --color: rgb(184, 188, 211);
 }
 
 body {
-  background-color: var(--background-light);
+  font-family: var(--font-family);
+  background-color: var(--background);
+  color: var(--color);
   min-height: 100vh;
   line-height: 1.5;
   font-size: 1.1rem;
+}
+
+/*Dark mode Toggle*/
+i[aria-hidden=true] {
+  display: none;
+}
+
+.fa-moon, .fa-sun {
+  background-color: transparent;
+  color: var(--color);
+}
+
+#dark-mode-toggle {
+  background-color: transparent;
+  position: absolute;
+  top: 1em;
+  right: 1em;
 }
 
 .container {
@@ -38,36 +65,71 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--background-light-accent);
+  background-color: var(--background-accent);
   flex-wrap: wrap;
-}
-
-.main {
-  grid-area: main;
-  font-family: var(--font-family-main);
+  position: relative;
 }
 
 #logo-text {
   font-size: clamp(1rem, 1rem + 2vw, 3rem);
-  font-family: var(--font-family-title);
 }
 
 #footer-text {
   font-size: clamp(0.5rem, 1rem + 2vw, 1.5rem);
-  font-family: var(--font-family-title);
 }
 
-h1 {
-  font-size: clamp(2rem, 1rem + 7vw, 5rem);
-  text-align: center;
+/*SEARCH*/
+.search-container {
+  position: relative;
 }
 
+#search-results-list {
+  position: absolute;
+  background-color: var(--background-accent);
+  border: 1px solid var(--color);
+  z-index: 1;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2px;
+  border-radius: 0.3em;
+  box-shadow: var(--color) 0px 5px 15px;
+}
+
+.search-results-list-item {
+  padding: 0.2em 1em;
+}
+
+.search-results-list-item:hover {
+  background-color: var(--background);
+}
+
+.hidden-results {
+  display: none;
+}
+
+.search {
+  background-color: var(--background);
+}
+
+.search-icon {
+  background: none;
+	padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.search::placeholder {
+  color: var(--color);
+}
+
+/*FILTER*/
 .filter-area {
   display: flex;
   flex-direction: column;
   gap: 3em;
   padding: 2em;
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--color);
 }
 
 .filter-label {
@@ -75,49 +137,23 @@ h1 {
 }
 
 .filter {
-  background-color: var(--background-light-accent);
-  cursor: pointer;
+  background-color: var(--background-accent);
   min-width: calc(100%);
 }
 
-.search-container {
-  position: relative;
-}
-
-.search {
-  background-color: var(--background-light);
-}
-
-.search-icon {
-  background: none;
-	// color: inherit;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.search::placeholder {
-  color: black;
-  opacity: 0.7;
-}
-
 .filter, .search {
-  font-family: var(--font-family-title);
   font-size: 1.2rem;
-  border-radius: 0.3em;
   padding: 0.5em 1.2em;
-  border: none;  
 }
 
-.reset-filters {
-  border: 0;
-  padding: 0.5em 1em;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  cursor: pointer;
-  background-color: var(--background-light-hf);
+/*MAIN*/
+.main {
+  grid-area: main;
+}
+
+h1 {
+  font-size: clamp(2rem, 1rem + 7vw, 5rem);
+  text-align: center;
 }
 
 /*grid layout for the list and list items*/
@@ -125,6 +161,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     gap: 2em;
+    margin: 2em 0;
 }
 
 .empty-state {
@@ -148,8 +185,7 @@ h1 {
 #animals-list button {
     border: 0;
     padding: 0;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    cursor: pointer;
+    box-shadow: var(--color) 0px 5px 15px;
     overflow: hidden;
 }
 
@@ -178,12 +214,19 @@ h1 {
       'footer';
   }
 
+  .header, .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
   .filter-area {
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 1em;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--color);
     border-right: none;
   }
 }
@@ -233,6 +276,7 @@ ul[role='list'],
 ol[role='list'] {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 /* Set core root defaults */
@@ -258,6 +302,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 input, label {
@@ -266,6 +311,20 @@ input, label {
 
 label {
   margin-bottom: 0.3em;
+}
+
+button, select, input {
+  border: none;
+  border-radius: 0.3em;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+button, select {
+  cursor: pointer;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

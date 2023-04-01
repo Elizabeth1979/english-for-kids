@@ -8,9 +8,41 @@ const letterFilter = document.getElementById("filter-by-letter");
 const liveRegion = document.getElementById("live-region");
 const searchInput = document.getElementById("search");
 const searchForm = document.getElementById("searchForm");
-const searchResultsList = document.getElementById("searchResultsList");
+const searchResultsList = document.getElementById("search-results-list");
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const moon = document.querySelector(".fa-moon");
+const sun = document.querySelector(".fa-sun");
 
 displayList(data);
+
+/*DARK MODE*/
+let darkMode = localStorage.getItem('darkMode');
+const enableDarkMode = () => {
+    document.body.classList.add("darkmode");
+    localStorage.setItem('darkMode', 'enabled');
+    moon.setAttribute('aria-hidden', 'true');
+    sun.removeAttribute('aria-hidden');
+}
+
+const disableDarkMode = () => {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem('darkMode', null);
+    sun.setAttribute('aria-hidden', 'true');
+    moon.removeAttribute('aria-hidden');
+}
+
+if(darkMode === 'enabled') {
+    enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+    darkMode = localStorage.getItem('darkMode');
+    if(darkMode !== 'enabled') {
+        enableDarkMode();
+    } else {
+        disableDarkMode();
+    }
+});
 
 searchInput.addEventListener('keyup', displayResults);
 searchForm.addEventListener('submit', searchWord);
@@ -23,17 +55,30 @@ function searchWord(e) {
     const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
     displayList(filteredArr);
     liveRegion.innerText = `${filteredArr.length} results found`;
+    searchInput.value = "";
 }
 
+// autocomplete
 function displayResults() {
     searchResultsList.innerHTML = "";
+    // if(searchInput.value === "") {
+    //     searchResultsList.classList.add("hidden-results");
+    //     return;
+    // }
+    
+    // searchResultsList.classList.remove("hidden-results");
     // let inputValue = searchInput.value.toLowerCase();
     // const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
-    // console.log(filteredArr);
     // let listItems = "";
     // filteredArr.forEach(item => {
-    //     listItems += `<li>${item.name}</li>`
+    //     listItems += `<li class="search-results-list-item">${item.name}</li>`
     // });
+    
+    // if(filteredArr.length === 0) {
+    //     searchResultsList.classList.add("hidden-results");
+    //     return;
+    // }
+
     // searchResultsList.innerHTML += listItems;
 }
 
