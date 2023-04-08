@@ -1,6 +1,4 @@
-import data from "./data.json" assert {
-    type: "json"
-};
+import data from "./data.json" assert { type: "json" };
 
 const animalList = document.getElementById("animals-list");
 const typeFilter = document.getElementById("filter-by-type");
@@ -16,127 +14,136 @@ const sun = document.querySelector(".fa-sun");
 displayList(data);
 
 /*DARK MODE*/
-let darkMode = localStorage.getItem('darkMode');
+let darkMode = localStorage.getItem("darkMode");
 const enableDarkMode = () => {
-    document.body.classList.add("darkmode");
-    localStorage.setItem('darkMode', 'enabled');
-    moon.setAttribute('aria-hidden', 'true');
-    sun.removeAttribute('aria-hidden');
-}
+  document.body.classList.add("darkmode");
+  localStorage.setItem("darkMode", "enabled");
+  moon.setAttribute("aria-hidden", "true");
+  sun.removeAttribute("aria-hidden");
+};
 
 const disableDarkMode = () => {
-    document.body.classList.remove("darkmode");
-    localStorage.setItem('darkMode', null);
-    sun.setAttribute('aria-hidden', 'true');
-    moon.removeAttribute('aria-hidden');
+  document.body.classList.remove("darkmode");
+  localStorage.setItem("darkMode", null);
+  sun.setAttribute("aria-hidden", "true");
+  moon.removeAttribute("aria-hidden");
+};
+
+if (darkMode === "enabled") {
+  enableDarkMode();
 }
 
-if(darkMode === 'enabled') {
+darkModeToggle.addEventListener("click", () => {
+  darkMode = localStorage.getItem("darkMode");
+  if (darkMode !== "enabled") {
     enableDarkMode();
-}
-
-darkModeToggle.addEventListener('click', () => {
-    darkMode = localStorage.getItem('darkMode');
-    if(darkMode !== 'enabled') {
-        enableDarkMode();
-    } else {
-        disableDarkMode();
-    }
+  } else {
+    disableDarkMode();
+  }
 });
 
-searchInput.addEventListener('keyup', displayResults);
-searchForm.addEventListener('submit', searchWord);
-typeFilter.addEventListener('change', filterByType);
-letterFilter.addEventListener('change', filterByLetter);
+searchInput.addEventListener("keyup", displayResults);
+searchForm.addEventListener("submit", searchWord);
+typeFilter.addEventListener("change", filterByType);
+letterFilter.addEventListener("change", filterByLetter);
 
 function searchWord(e) {
-    e.preventDefault();
-    let inputValue = searchInput.value.toLowerCase();
-    const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
-    displayList(filteredArr);
-    liveRegion.innerText = `${filteredArr.length} results found`;
-    searchInput.value = "";
+  e.preventDefault();
+  let inputValue = searchInput.value.toLowerCase();
+  const filteredArr = data.filter((item) =>
+    item.name.toLowerCase().includes(inputValue)
+  );
+  displayList(filteredArr);
+  liveRegion.innerText = `${filteredArr.length} results found`;
+  searchInput.value = "";
 }
 
 // autocomplete
 function displayResults() {
-    searchResultsList.innerHTML = "";
-    // if(searchInput.value === "") {
-    //     searchResultsList.classList.add("hidden-results");
-    //     return;
-    // }
-    
-    // searchResultsList.classList.remove("hidden-results");
-    // let inputValue = searchInput.value.toLowerCase();
-    // const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
-    // let listItems = "";
-    // filteredArr.forEach(item => {
-    //     listItems += `<li class="search-results-list-item">${item.name}</li>`
-    // });
-    
-    // if(filteredArr.length === 0) {
-    //     searchResultsList.classList.add("hidden-results");
-    //     return;
-    // }
+  searchResultsList.innerHTML = "";
+  // if(searchInput.value === "") {
+  //     searchResultsList.classList.add("hidden-results");
+  //     return;
+  // }
 
-    // searchResultsList.innerHTML += listItems;
+  // searchResultsList.classList.remove("hidden-results");
+  // let inputValue = searchInput.value.toLowerCase();
+  // const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
+  // let listItems = "";
+  // filteredArr.forEach(item => {
+  //     listItems += `<li class="search-results-list-item">${item.name}</li>`
+  // });
+
+  // if(filteredArr.length === 0) {
+  //     searchResultsList.classList.add("hidden-results");
+  //     return;
+  // }
+
+  // searchResultsList.innerHTML += listItems;
 }
 
 function filterByType() {
-    const value = this.value;
-    const filteredArr = data.filter((item) => value === "all" || item.category === value);
-    displayList(filteredArr);
-    liveRegion.innerText = `${filteredArr.length} results found`;
+  const value = this.value;
+  const filteredArr = data.filter(
+    (item) => value === "all" || item.category === value
+  );
+  displayList(filteredArr);
+  liveRegion.innerText = `${filteredArr.length} results found`;
 }
 
 function filterByLetter() {
-    const value = this.value;
-    console.log(value);
-    const filteredArr = data.filter((item) => value === "all" || item.name.startsWith(value.toUpperCase()));
-    displayList(filteredArr);
-    liveRegion.innerText = `${filteredArr.length} results found`;
+  const value = this.value;
+  console.log(value);
+  const filteredArr = data.filter(
+    (item) => value === "all" || item.name.startsWith(value.toUpperCase())
+  );
+  displayList(filteredArr);
+  liveRegion.innerText = `${filteredArr.length} results found`;
 }
 
 // display the list of animals
 function displayList(data) {
-    animalList.innerHTML = "";
-    let listItems = "";
-    for (let i = 0; i < data.length; i++) {
-        let item = data[i];
-        listItems += `<li class="list-item">
+  animalList.innerHTML = "";
+  let listItems = "";
+  for (let i = 0; i < data.length; i++) {
+    let item = data[i];
+    listItems += `<li class="list-item">
             <div class="list-item-title">
                 <h2>${item.name}</h2>
-                <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${item.pronounciation}</p>
+                <p><span aria-hidden="true">&#128172</span><span class="sr-only">pronounciation</span>${
+                  item.pronounciation
+                }</p>
             </div>
             <button class="animal-btn" id="btn-${item.name}">
-                <img class="animal-img" width="300" height="300" alt=${item.alt} src=${item.image}>
+                <img class="animal-img" width="300" height="300" alt=${
+                  item.alt
+                } src=${item.image}>
             </button>
             <audio id=${item.name} src=${item.audio}></audio>
             <p class="about">${item.about === undefined ? "" : item.about}</p>
         </li>`;
-    }
-    if (listItems === "") {
-        animalList.innerHTML = `<p class="empty-state">No words found</p>`;
-        liveRegion.innerText = "No words found";
-    } else {
-        animalList.innerHTML += listItems;
-    }
-    addPlayOnClick();
+  }
+  if (listItems === "") {
+    animalList.innerHTML = `<p class="empty-state">No words found</p>`;
+    liveRegion.innerText = "No words found";
+  } else {
+    animalList.innerHTML += listItems;
+  }
+  addPlayOnClick();
 }
 
 function addPlayOnClick() {
-    animalList.addEventListener('click', (e) => {
-        if (e.target.localName != "button") return;
-        let audio = e.target.nextElementSibling;
-        audio.play();
-    });
+  animalList.addEventListener("click", (e) => {
+    if (e.target.localName != "button") return;
+    let audio = e.target.nextElementSibling;
+    audio.play();
+  });
 }
 
 // Menu operability - is this the best way?
 // menuBtn.addEventListener('click', () => {
 //     menu.classList.toggle('close');
 // });
-
 
 /*
 1. Implement filtering by first letter
@@ -148,6 +155,8 @@ function addPlayOnClick() {
 7. At first render display all animals - any performance issue?
 8. More categories: Nature, MAmmals, Birds
 9. How do I know if its a string or a number?
+10. Add sort functionality
+11. Convert search to filter?
 */
 
 /*
