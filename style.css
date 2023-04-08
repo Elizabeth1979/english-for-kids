@@ -1,9 +1,8 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
 :root {
-  --font-family: 'Questrial', sans-serif;
+  --font-family: "Questrial", sans-serif;
   --background-accent: rgb(134, 230, 230);
   --background: rgb(228, 236, 234);
   --color: rgb(40, 40, 40);
@@ -26,11 +25,12 @@ body {
 }
 
 /*Dark mode Toggle*/
-i[aria-hidden=true] {
+i[aria-hidden="true"] {
   display: none;
 }
 
-.fa-moon, .fa-sun {
+.fa-moon,
+.fa-sun {
   background-color: transparent;
   color: var(--color);
 }
@@ -47,9 +47,9 @@ i[aria-hidden=true] {
   grid-template-columns: 15rem 1fr;
   grid-template-rows: 7rem 1fr 5rem;
   grid-template-areas:
-    'header header'
-    'filter main'
-    'footer footer';
+    "header header"
+    "filter main"
+    "footer footer";
   min-height: 100vh;
 }
 
@@ -63,7 +63,8 @@ i[aria-hidden=true] {
   border-top: 1px solid transparent;
 }
 
-.header, .footer {
+.header,
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -115,7 +116,7 @@ i[aria-hidden=true] {
 
 .search-icon {
   background: none;
-	padding: 0;
+  padding: 0;
   position: absolute;
   top: 0;
   right: 0;
@@ -143,7 +144,8 @@ i[aria-hidden=true] {
   min-width: calc(100%);
 }
 
-.filter, .search {
+.filter,
+.search {
   font-size: 1.2rem;
   padding: 0.5em 1.2em;
 }
@@ -160,10 +162,10 @@ h1 {
 
 /*grid layout for the list and list items*/
 #animals-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    gap: 2em;
-    margin: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 2em;
+  margin: 2em 0;
 }
 
 .empty-state {
@@ -185,10 +187,11 @@ h1 {
 }
 
 #animals-list button {
-    border: 0;
-    padding: 0;
-    box-shadow: var(--color) 0px 5px 15px;
-    overflow: hidden;
+  border: 0;
+  padding: 0;
+  box-shadow: var(--color) 0px 5px 15px;
+  overflow: hidden;
+  width: 100%;
 }
 
 .animal-img {
@@ -197,9 +200,11 @@ h1 {
   object-fit: cover;
   pointer-events: none;
   transition: scale 250ms ease-in-out;
+  width: 100%;
 }
 
-.animal-btn:hover img, .animal-btn:focus img{
+.animal-btn:hover img,
+.animal-btn:focus img {
   scale: 1.1;
 }
 
@@ -220,7 +225,7 @@ h1 {
 
 /*
 RESET
-*/ 
+*/
 
 /* Box sizing rules */
 *,
@@ -244,8 +249,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -277,7 +282,8 @@ select {
   color: inherit;
 }
 
-input, label {
+input,
+label {
   display: block;
 }
 
@@ -285,7 +291,9 @@ label {
   margin-bottom: 0.3em;
 }
 
-button, select, input {
+button,
+select,
+input {
   border: 1px solid transparent;
   border-radius: 0.3em;
 }
@@ -295,16 +303,17 @@ button, select, input {
   background: transparent;
 }
 
-button, select {
+button,
+select {
   cursor: pointer;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -324,13 +333,14 @@ button, select {
     grid-template-columns: 1fr;
     grid-template-rows: 10rem 10rem 1fr 5rem;
     grid-template-areas:
-      'header'
-      'filter'
-      'main'
-      'footer';
+      "header"
+      "filter"
+      "main"
+      "footer";
   }
 
-  .header, .footer {
+  .header,
+  .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
