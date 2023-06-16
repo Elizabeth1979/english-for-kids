@@ -3,6 +3,7 @@ import data from "./data.json" assert { type: "json" };
 const animalList = document.getElementById("animals-list");
 const typeFilter = document.getElementById("filter-by-type");
 const letterFilter = document.getElementById("filter-by-letter");
+const resetFiltersButton = document.getElementById("reset-filters");
 const liveRegion = document.getElementById("live-region");
 const searchInput = document.getElementById("search");
 const searchForm = document.getElementById("searchForm");
@@ -42,10 +43,19 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
+/* Filter and Search */
 searchInput.addEventListener("keyup", displayResults);
 searchForm.addEventListener("submit", searchWord);
 typeFilter.addEventListener("change", filterByType);
 letterFilter.addEventListener("change", filterByLetter);
+
+function resetFilters() {
+  searchInput.value = "";
+  typeFilter.value = "all";
+  letterFilter.value = "all"
+  displayList(data);
+  liveRegion.innerText = `${filteredArr.length} results found`;
+}
 
 function searchWord(e) {
   e.preventDefault();
@@ -55,7 +65,6 @@ function searchWord(e) {
   );
   displayList(filteredArr);
   liveRegion.innerText = `${filteredArr.length} results found`;
-  searchInput.value = "";
 }
 
 // autocomplete
@@ -93,7 +102,6 @@ function filterByType() {
 
 function filterByLetter() {
   const value = this.value;
-  console.log(value);
   const filteredArr = data.filter(
     (item) => value === "all" || item.name.startsWith(value.toUpperCase())
   );
