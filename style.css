@@ -150,6 +150,10 @@ i[aria-hidden="true"] {
   padding: 0.5em 1.2em;
 }
 
+// #reset-filters {
+//   background-color: var(--background-accent);
+// }
+
 /*MAIN*/
 .main {
   grid-area: main;
@@ -166,7 +170,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(15em, 20em));
   gap: 2em;
   margin: 0 2em;
-  
+  justify-content: center;
 }
 
 .empty-state {
