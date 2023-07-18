@@ -1,5 +1,3 @@
-import data from "./data.json" assert { type: "json" };
-
 const animalList = document.getElementById("animals-list");
 const typeFilter = document.getElementById("filter-by-type");
 const letterFilter = document.getElementById("filter-by-letter");
@@ -12,7 +10,17 @@ const darkModeToggle = document.getElementById("dark-mode-toggle");
 const moon = document.querySelector(".fa-moon");
 const sun = document.querySelector(".fa-sun");
 
-displayList(data);
+let animalsData = null;
+
+fetch("./animalsData.json")
+  .then(response => response.json())
+  .then(data => {
+    animalsData = data
+    displayList(animalsData);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 /*DARK MODE*/
 let darkMode = localStorage.getItem("darkMode");
@@ -53,14 +61,14 @@ function resetFilters() {
   searchInput.value = "";
   typeFilter.value = "all";
   letterFilter.value = "all"
-  displayList(data);
+  displayList(animalsData);
   liveRegion.innerText = `${filteredArr.length} results found`;
 }
 
 function searchWord(e) {
   e.preventDefault();
   let inputValue = searchInput.value.toLowerCase();
-  const filteredArr = data.filter((item) =>
+  const filteredArr = animalsData.filter((item) =>
     item.name.toLowerCase().includes(inputValue)
   );
   displayList(filteredArr);
@@ -77,7 +85,7 @@ function displayResults() {
 
   // searchResultsList.classList.remove("hidden-results");
   // let inputValue = searchInput.value.toLowerCase();
-  // const filteredArr = data.filter((item) => item.name.toLowerCase().includes(inputValue));
+  // const filteredArr = animalsData.filter((item) => item.name.toLowerCase().includes(inputValue));
   // let listItems = "";
   // filteredArr.forEach(item => {
   //     listItems += `<li class="search-results-list-item">${item.name}</li>`
@@ -93,7 +101,7 @@ function displayResults() {
 
 function filterByType() {
   const value = this.value;
-  const filteredArr = data.filter(
+  const filteredArr = animalsData.filter(
     (item) => value === "all" || item.category === value
   );
   displayList(filteredArr);
@@ -102,7 +110,7 @@ function filterByType() {
 
 function filterByLetter() {
   const value = this.value;
-  const filteredArr = data.filter(
+  const filteredArr = animalsData.filter(
     (item) => value === "all" || item.name.startsWith(value.toUpperCase())
   );
   displayList(filteredArr);
@@ -110,11 +118,11 @@ function filterByLetter() {
 }
 
 // display the list of animals
-function displayList(data) {
+function displayList(animalsData) {
   animalList.innerHTML = "";
   let listItems = "";
-  for (let i = 0; i < data.length; i++) {
-    let item = data[i];
+  for (let i = 0; i < animalsData.length; i++) {
+    let item = animalsData[i];
     listItems += `<li class="list-item">
             <div class="list-item-title">
                 <h2>${item.name}</h2>
